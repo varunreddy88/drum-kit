@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election commission of India</title>
+</head>
+<body>
+    <h1>(check voting eligibility)</h1>
+    <lable> for="ageinput">enter your age:</lable>
+<input type="number"id="age input"min="0" max="100">
+<button onclick="checkeligibility()">check eligibilty</button>
+<p id="result"></p>
+<script> 
+    function checkeligibility(){
+        const ageinput = document.getElementById('ageinput');
+        const resultelement = document.getElementById(result);
+        const age = parseInt(ageinput.value);
+        if (isNaN(age)) {
+            resultelement.textContent = "please enter the valid age";
+        }else if (age >=18) {
+            resultelement.textContent = "you arre eligible for voting";
+        } else {
+            resultelement.textContent = "you are not eligible";
+        }
+    }
+</script>
+</body>
+</html>
